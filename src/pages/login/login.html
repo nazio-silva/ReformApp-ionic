@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <img class="logo" src="assets/imgs/logo.png" alt="logo">
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="conteudo">
+
+  <ion-item>
+    <ion-label floating> Usuário </ion-label>
+    <ion-input type="text" value="" [(ngModel)]="usuario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating> Senha </ion-label>
+    <ion-input type="password" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+
+  <br>
+
+  <button ion-button full (click)="goToHomePage()"> Entrar </button>
+  <br>
+  <p class="link" (click)="goToCadastro()"> Cadastrar Conta </p>
+  
+  <!--<button ion-button block color="facebook">
+    <ion-icon name="logo-facebook"></ion-icon> Logar com Facebook
+  </button>
+  -->
+</ion-content>

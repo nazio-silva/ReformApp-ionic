@@ -1,7 +1,7 @@
 import { User } from './../../models/user.model';
 import { FirebaseListObservable } from 'angularfire2';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -9,11 +9,17 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  public area;
+  public preco;
+
   constructor(
     public navCtrl: NavController,
-   
+    public navParams: NavParams,
   ) {
-
+    this.area = this.navParams.data;
   }
 
+  calcular(a,p) {
+   console.log(this.area);
+  }
 }

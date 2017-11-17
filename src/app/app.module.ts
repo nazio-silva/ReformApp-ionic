@@ -1,3 +1,4 @@
+import { ServicosPage } from './../pages/servicos/servicos';
 import { UserService } from './../providers/user/user.service';
 
 import { CadastroPage } from './../pages/cadastro/cadastro';
@@ -17,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
 import { AuthService } from '../providers/auth/auth.service';
+import { ProjetosPage } from '../pages/projetos/projetos';
 
 export const firebaseAppConfig: FirebaseAppConfig = {
   apiKey: "AIzaSyCmdQvGkLnpyI17uWiOhS64aBI8fp4bo4s",
@@ -33,7 +35,9 @@ export const firebaseAppConfig: FirebaseAppConfig = {
     HomePage,
     ListPage,
     LoginPage,
-    CadastroPage
+    CadastroPage,
+    ProjetosPage,
+    ServicosPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ export const firebaseAppConfig: FirebaseAppConfig = {
     HomePage,
     ListPage,
     LoginPage,
-    CadastroPage
+    CadastroPage,
+    ProjetosPage,
+    ServicosPage
   ],
   providers: [
     StatusBar,

@@ -16,7 +16,7 @@ export class AuthService extends BaseService {
     console.log('Hello AuthProvider Provider');
   }
 
-  createAuthUser(user: { email: string, password: string }): firebase.Promise<FirebaseAuthState> {
+  createAuthUser(user: { email: string, password: string }): Promise<FirebaseAuthState> {
     return this.auth.createUser(user)
       .catch(this.handlePromiseError);
   }

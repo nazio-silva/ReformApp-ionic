@@ -1,44 +1,51 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button  secondary menuToggle>
-      <ion-icon name="menu"></ion-icon>
+    <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
     </button>
-    <img class="logo" src="assets/imgs/logo.png" alt="logo">
-  </ion-navbar>
+  <img class="logo" src="assets/imgs/logo.png" alt="logo">
+</ion-navbar>
 </ion-header>
 
-<ion-content padding class="teste">
-  
-  <!--<button ion-button secondary menuToggle> Entrar </button>
-  <ion-row>
-    <ion-col> TIJOLO </ion-col>
-    <ion-col> TELHA </ion-col>
-    <ion-col> CIMENTO </ion-col>
-    <ion-col> MADEIRA </ion-col>
-  </ion-row>
-
-    <ion-row>
-        <ion-col> <a href="#">Home</a> </ion-col>
-        <ion-col> <a href="#">Simulador</a> </ion-col>
-        <ion-col> <a href="#">Serviços</a> </ion-col>
-        <ion-col> <a href="#">Fotos</a> </ion-col>
-    </ion-row>
+<ion-content>
+  <h1 text-center> Simulador </h1>
 
   <ion-card>
-    <p text-center> TIJOLO - 8 FUROS </p>
+
     <ion-list>
       <ion-item>
-        <ion-label>Área:</ion-label>
-        <ion-input type='number'></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Preço:</ion-label>
-        <ion-input type='number'></ion-input>
+        <ion-label> MATERIAIS </ion-label>
+        <ion-select [(ngModel)]="materiais">
+          <ion-option value="tj">TIJOLO</ion-option>
+          <ion-option value="tel">TELHA</ion-option>
+          <ion-option value="mad">MADEIRA</ion-option>
+          <ion-option value="ci">CIMENTO</ion-option>
+        </ion-select>
       </ion-item>
     </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label> Area: </ion-label>
+        <ion-input type="number" ([ngModel])="area"></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Preço: </ion-label>
+        <ion-input type="number" ([ngModel])="preco"></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item> QTD: </ion-item>
+      <hr>
+      <hr>
+      <ion-item> R$: </ion-item>
+    </ion-list>
   </ion-card>
-  <button ion-button > Calcular </button>
-  -->
-  
+
+  <div class="btn-calc">
+    <button ion-button name="block" (click)="calcular(area, preco)"> Calcular </button>
+  </div>
+
 </ion-content>

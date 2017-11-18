@@ -3,8 +3,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { CadastroPage } from './../cadastro/cadastro';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Loading, AlertController } from 'ionic-angular';
-import { FormBuilder } from '@angular/forms/src/form_builder';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Loading } from 'ionic-angular/components/loading/loading';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 

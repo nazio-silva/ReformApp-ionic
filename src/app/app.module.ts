@@ -16,7 +16,7 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { AngularFireModule, FirebaseAppConfig } from 'angularfire2';
+import { AngularFireModule, FirebaseAppConfig, FirebaseAuthConfig, AuthProviders, AuthMethods } from 'angularfire2';
 import { AuthService } from '../providers/auth/auth.service';
 import { ProjetosPage } from '../pages/projetos/projetos';
 
@@ -28,6 +28,11 @@ export const firebaseAppConfig: FirebaseAppConfig = {
   storageBucket: "reformapp-74d5a.appspot.com",
   messagingSenderId: "620906092349"
 };
+
+export const firebaseAuthConfig = {
+  provider: AuthProviders.Custom,
+  method: AuthMethods.Password
+}
 
 @NgModule({
   declarations: [
@@ -43,7 +48,7 @@ export const firebaseAppConfig: FirebaseAppConfig = {
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseAppConfig)
+    AngularFireModule.initializeApp(firebaseAppConfig, firebaseAuthConfig),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

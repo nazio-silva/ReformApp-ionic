@@ -1,6 +1,6 @@
 {
-  "name": "reformapp",
-  "app_id": "5df15d24",
+  "name": "reform",
+  "app_id": "ee7f925e",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

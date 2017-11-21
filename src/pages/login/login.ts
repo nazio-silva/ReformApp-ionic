@@ -56,7 +56,7 @@ export class LoginPage {
 
   private showLoading(): Loading {
     let loading: Loading = this.loadingCtrl.create({
-      content: "Please wait..."
+      content: "Carregando..."
     });
 
     loading.present();

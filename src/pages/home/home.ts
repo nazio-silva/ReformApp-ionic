@@ -9,17 +9,16 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
-  public area;
-  public preco;
+  public cal;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
   ) {
-    this.area = this.navParams.data;
+    this.cal = this.navParams.data;
   }
 
-  calcular(a,p) {
-   console.log(this.area);
+  calcular(b) {
+    console.log(this.cal);
   }
 }

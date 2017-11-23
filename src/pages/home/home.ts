@@ -19,6 +19,8 @@ export class HomePage {
   }
 
   calcular(b) {
-    console.log(this.cal);
+    console.log(this.cal, {
+      nome:'joao'
+    });
   }
 }

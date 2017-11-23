@@ -32,8 +32,10 @@
 
     <br>
 
-    <button ion-button full type="submit" [disabled]="cadastroForm.invalid" (click)="goToHomePage()"> Cadastrar </button>
-
+    <div class="btn-cadastro">
+      <button ion-button round type="submit" [disabled]="cadastroForm.invalid" (click)="goToHomePage()"> Cadastrar </button>
+    </div>
+    
   </form>
 
 </ion-content>

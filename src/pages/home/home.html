@@ -10,7 +10,7 @@
 <ion-content>
 
   <h1 text-center> Simulador </h1>
-
+  
   <ion-card>
 
     <ion-list>
@@ -28,20 +28,24 @@
     <ion-list>
       <ion-item>
         <ion-label> Area: </ion-label>
-        <ion-input type="number" ([ngModel])="area"></ion-input>
+        <ion-input name="area" type="number" [(ngModel)]="area"></ion-input>
       </ion-item>
       <hr>
       <hr>
       <ion-item>
         <ion-label> Preço: </ion-label>
-        <ion-input type="number" ([ngModel])="preco"></ion-input>
+        <ion-input name="preco" type="number" [(ngModel)]="preco"></ion-input>
       </ion-item>
       <hr>
       <hr>
-      <ion-item> QTD: </ion-item>
+      <ion-item>
+        <ion-label> Quantidade: {{area * 27.5}} </ion-label>
+      </ion-item>
       <hr>
       <hr>
-      <ion-item> R$: </ion-item>
+      <ion-item>
+        <ion-label> Gasto: {{(preco/1000) * (area * 27.5)/0.01}} </ion-label>
+      </ion-item>
     </ion-list>
   </ion-card>
 

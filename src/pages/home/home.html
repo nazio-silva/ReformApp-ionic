@@ -15,19 +15,18 @@
 
     <ion-list>
       <ion-item>
-        <ion-label> MATERIAIS </ion-label>
-        <ion-select [(ngModel)]="materiais">
-          <ion-option value="tijolo"> TIJOLO </ion-option>
-          <ion-option value="telha"> TELHA </ion-option>
-          <ion-option value="madeira"> MADEIRA </ion-option>
-          <ion-option value="cimento"> CIMENTO </ion-option>
+        <ion-label> TIJOLOS </ion-label>
+        <ion-select [(ngModel)]="tijolos">
+          <ion-option value="conv"> 8 FUROS </ion-option>
+          <ion-option value="ref"> REFRATARIO </ion-option>
+          <ion-option value="bra"> BRANCO </ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
 
     <ion-list>
       <ion-item>
-        <ion-label> Area: </ion-label>
+        <ion-label> Área: </ion-label>
         <ion-input name="area" type="number" [(ngModel)]="area"></ion-input>
       </ion-item>
       <hr>
@@ -39,12 +38,12 @@
       <hr>
       <hr>
       <ion-item>
-        <ion-label> Quantidade: {{area * 27.5}} </ion-label>
+        <ion-label> Quantidade: {{qtd}} </ion-label> 
       </ion-item>
       <hr>
       <hr>
       <ion-item>
-        <ion-label> Gasto: {{(preco/1000) * (area * 27.5)/0.01}} </ion-label>
+        <ion-label> Gasto R$: {{gasto}} </ion-label>
       </ion-item>
     </ion-list>
   </ion-card>

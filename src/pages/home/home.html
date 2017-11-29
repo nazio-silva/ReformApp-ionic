@@ -17,9 +17,9 @@
       <ion-item>
         <ion-label> TIJOLOS </ion-label>
         <ion-select [(ngModel)]="tijolos">
-          <ion-option value="conv"> 8 FUROS </ion-option>
+          <ion-option value="conv"> CERAMICO 8-F </ion-option>
           <ion-option value="ref"> REFRATARIO </ion-option>
-          <ion-option value="bra"> BRANCO </ion-option>
+          <ion-option value="bra"> MACIÇO </ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
@@ -43,13 +43,62 @@
       <hr>
       <hr>
       <ion-item>
-        <ion-label> Gasto R$: {{gasto}} </ion-label>
+        <ion-label> R$: {{gasto}} </ion-label>
       </ion-item>
     </ion-list>
   </ion-card>
 
   <div class="btn-calc">
-    <button ion-button round (click)="calcular()"> Calcular </button>
+    <button ion-button round (click)="calcular_tijolo()"> Calcular </button>
   </div>
+  
+  <hr>
+
+  <ion-card>
+    
+        <ion-list>
+          <ion-item>
+            <ion-label> TELHAS </ion-label>
+            <ion-select [(ngModel)]="telhas">
+              <ion-option value="conv"> COLONIAL </ion-option>
+              <ion-option value="ref"> PORTUGUESA </ion-option>
+              <ion-option value="bra"> DUPLA </ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list>
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area_telha"></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Inclinação: </ion-label>
+            <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao"></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_telha"></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{qtd_telha}}  </ion-label> 
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> R$: {{gasto_telha}} </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+    
+      <div class="btn-calc">
+        <button ion-button round (click)="calcular_telha()"> Calcular </button>
+      </div>
 
 </ion-content>

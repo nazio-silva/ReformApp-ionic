@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ProjetosPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams } from 'ionic-angular'
 
 @IonicPage()
 @Component({
@@ -15,11 +8,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProjetosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public contador: number = 0;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProjetosPage');
-  }
+  curtir() {
 
+    let x = 0;
+
+    for( x = 0; x <= this.contador; x ++) {
+      
+    }
+    this.contador = x;
+  }
 }

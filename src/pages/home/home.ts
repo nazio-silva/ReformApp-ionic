@@ -11,45 +11,62 @@ import { NgForm } from '@angular/forms';
 })
 export class HomePage {
 
-  public area : number;
-  public preco : number;
+  //Tijolo
+  public area: number;
+  public preco: number;
+  public qtd: number = 0;
+  public gasto: string = '0';
 
-  public qtd = 0;
-  public gasto = 0.00;
-  
+
+  //Telha
+  public area_telha: number;
+  public preco_telha: number;
+  public inclinacao: number;
+  public qtd_telha: number = 0;
+  public gasto_telha: string = '0';
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
   ) {
-   
+
   }
 
-  calcular() {
-    var quantidade_tijolo: number = Math.round((this.area * 1 ) * 27.5);
+  calcular_tijolo() {
+    var quantidade_tijolo: number = Math.round((this.area * 1) * 27.5);
     this.qtd = quantidade_tijolo;
-    console.log("Quantidade:" , quantidade_tijolo);
+    console.log("Quantidade:", quantidade_tijolo);
 
-    var gasto_tijolo: number = (this.preco/1000 * this.area * 1 ) * 27.5;
+    var gasto_tijolo: number = (this.preco / 1000 * this.area * 1) * 27.5;
     this.gasto = gasto_tijolo.toFixed(2);
-    console.log("Valor Gasto:" , this.gasto);
+    console.log("Valor Gasto:", this.gasto);
   }
-}
 
+  calcular_telha() {
+    console.log("Calculando quantidade de telhas...", this.area_telha);
+    console.log("Calculando quantidade de telhas...", this.inclinacao);
+    console.log("Calculando quantidade de telhas...", this.preco_telha);
+  } 
+}
 
 /*
 
-  var teste = ${nomeVariavelVindoAction}
-ai sua variavel javascript ja virá com o valor que vc mandou da action.
+public Double getAreaInclinada(){
+		if(inclinacao >= 30 && inclinacao <= 35){
+			return this.areaCoberta* 1.052;
+		}else if(inclinacao > 35 && inclinacao <= 40){
+			return this.areaCoberta* 1.070;
+		}else{
+			System.out.println("Inclinação fora da norma!");
+			}
+		return this.areaCoberta;
+		}
+	
+	public Double getQuantidade(){
+		return getAreaInclinada() * 25.92;
+	}
+	public Double getValorGastoTelha(){
+		return getPrecoDaTelha()*getQuantidade();
+	}
 
-
-
-  public Double getQuantidade(){
-    return (this.area * 27.5);
-  }
-  public Double getPrecoDoTijolo(){
-    return this.preco / 1000;		
-  }
-  public Double getValorGastoTijolo(){
-    return (getPrecoDoTijolo()*getQuantidade());
-  }
 */

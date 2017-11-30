@@ -1,16 +1,16 @@
 <ion-header no-border>
   <ion-navbar>
     <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
+      <ion-icon name="menu"></ion-icon>
     </button>
-  <img class="logo" src="assets/imgs/logo.png" alt="logo">
-</ion-navbar>
+    <img class="logo" src="assets/imgs/logo.png" alt="logo">
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
 
   <h1 text-center> Simulador </h1>
-  
+
   <ion-card>
 
     <ion-list>
@@ -27,23 +27,23 @@
     <ion-list>
       <ion-item>
         <ion-label> Área: </ion-label>
-        <ion-input name="area" type="number" [(ngModel)]="area"></ion-input>
+        <ion-input name="area" type="number" [(ngModel)]="area" placeholder=" Digite o valor da área "></ion-input>
       </ion-item>
       <hr>
       <hr>
       <ion-item>
-        <ion-label> Preço: </ion-label>
-        <ion-input name="preco" type="number" [(ngModel)]="preco"></ion-input>
+        <ion-label> Preço R$: </ion-label>
+        <ion-input name="preco" type="number" [(ngModel)]="preco" placeholder=" Preço do Tijolo"></ion-input>
       </ion-item>
       <hr>
       <hr>
       <ion-item>
-        <ion-label> Quantidade: {{qtd}} </ion-label> 
+        <ion-label> Quantidade: {{qtd}} </ion-label>
       </ion-item>
       <hr>
       <hr>
       <ion-item>
-        <ion-label> R$: {{gasto}} </ion-label>
+        <ion-label> Total R$: {{gasto}} </ion-label>
       </ion-item>
     </ion-list>
   </ion-card>
@@ -51,54 +51,145 @@
   <div class="btn-calc">
     <button ion-button round (click)="calcular_tijolo()"> Calcular </button>
   </div>
-  
+
   <hr>
 
   <ion-card>
-    
-        <ion-list>
-          <ion-item>
-            <ion-label> TELHAS </ion-label>
-            <ion-select [(ngModel)]="telhas">
-              <ion-option value="conv"> COLONIAL </ion-option>
-              <ion-option value="ref"> PORTUGUESA </ion-option>
-              <ion-option value="bra"> DUPLA </ion-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-    
-        <ion-list>
-          <ion-item>
-            <ion-label> Área: </ion-label>
-            <ion-input name="area" type="number" [(ngModel)]="area_telha"></ion-input>
-          </ion-item>
-          <hr>
-          <hr>
-          <ion-item>
-            <ion-label> Inclinação: </ion-label>
-            <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao"></ion-input>
-          </ion-item>
-          <hr>
-          <hr>
-          <ion-item>
-            <ion-label> Preço: </ion-label>
-            <ion-input name="preco" type="number" [(ngModel)]="preco_telha"></ion-input>
-          </ion-item>
-          <hr>
-          <hr>
-          <ion-item>
-            <ion-label> Quantidade: {{qtd_telha}}  </ion-label> 
-          </ion-item>
-          <hr>
-          <hr>
-          <ion-item>
-            <ion-label> R$: {{gasto_telha}} </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-card>
-    
-      <div class="btn-calc">
-        <button ion-button round (click)="calcular_telha()"> Calcular </button>
-      </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label> TELHAS </ion-label>
+        <ion-select [(ngModel)]="telhas">
+          <ion-option value="conv"> COLONIAL </ion-option>
+          <ion-option value="ref"> PORTUGUESA </ion-option>
+          <ion-option value="bra"> DUPLA </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label> Área: </ion-label>
+        <ion-input name="area" type="number" [(ngModel)]="area_telha" placeholder=" Área Coberta "></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Inclinação: </ion-label>
+        <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao" placeholder=" Inclinação % "></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Preço R$: </ion-label>
+        <ion-input name="preco" type="number" [(ngModel)]="preco_telha" placeholder=" Preço da Telha "></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Quantidade: {{qtd_telha}} </ion-label>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Total R$: {{gasto_telha}} </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <div class="btn-calc">
+    <button ion-button round (click)="calcular_telha()"> Calcular </button>
+  </div>
+
+  <hr>
+
+  <ion-card>
+
+    <ion-list>
+      <ion-item>
+        <ion-label> MADEIRA </ion-label>
+        <ion-select [(ngModel)]="madeira">
+          <ion-option value="linha"> Linha </ion-option>
+          <ion-option value="caibro"> Caibro </ion-option>
+          <ion-option value="ripa"> Ripa </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label> Área: </ion-label>
+        <ion-input name="area" type="number" [(ngModel)]="area_madeira" placeholder=" Área Coberta "></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Inclinação: </ion-label>
+        <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao_madeira" placeholder=" Inclinação % "></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Preço R$: </ion-label>
+        <ion-input name="preco" type="number" [(ngModel)]="preco_madeira" placeholder=" Preço da Madeira "></ion-input>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> Quantidade: {{qtd_madeira}} </ion-label>
+      </ion-item>
+      <hr>
+      <hr>
+      <ion-item>
+        <ion-label> TotalR$: {{gasto_madeira}} </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <div class="btn-calc">
+    <button ion-button round (click)="calcular_madeira()"> Calcular </button>
+  </div>
+
+  <hr>
+  
+    <ion-card>
+  
+      <ion-list>
+        <ion-item>
+          <ion-label> CIMENTO </ion-label>
+          <ion-select [(ngModel)]="cimento">
+            <ion-option value="alvenaria"> Alvenaria 4/1 </ion-option>
+            <ion-option value="reboco"> Reboco 5/1 </ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list>
+        <ion-item>
+          <ion-label> Área: </ion-label>
+          <ion-input name="area" type="number" [(ngModel)]="area_cimento" placeholder=" Digite a área "></ion-input>
+        </ion-item>
+        <hr>
+        <hr>
+        <ion-item>
+          <ion-label> Preço R$: </ion-label>
+          <ion-input name="preco" type="number" [(ngModel)]="preco_cimento" placeholder=" Preço do Cimento "></ion-input>
+        </ion-item>
+        <hr>
+        <hr>
+        <ion-item>
+          <ion-label> Quantidade: {{qtd_cimento}} </ion-label>
+        </ion-item>
+        <hr>
+        <hr>
+        <ion-item>
+          <ion-label> TotalR$: {{gasto_cimento}} </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  
+    <div class="btn-calc">
+      <button ion-button round (click)="calcular_cimento()"> Calcular </button>
+    </div>
 
 </ion-content>

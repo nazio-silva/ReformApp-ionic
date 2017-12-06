@@ -26,7 +26,7 @@ export const firebaseAppConfig: FirebaseAppConfig = {
   databaseURL: "https://reformapp-74d5a.firebaseio.com",
   //projectId: "reformapp-74d5a",
   storageBucket: "reformapp-74d5a.appspot.com",
-  messagingSenderId: "620906092349"
+  //messagingSenderId: "620906092349"
 };
 
 export const firebaseAuthConfig = {

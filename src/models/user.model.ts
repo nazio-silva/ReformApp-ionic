@@ -7,10 +7,11 @@ export class User {
     }
 }
 
-/*export class Simulador {
+/*export class Material {
     constructor(
         public area: string,
         public preco: double,
+        public inclinacao: double,
         private qtd: int,
         private valor_gasto: int) {
     }

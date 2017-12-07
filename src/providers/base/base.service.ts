@@ -12,7 +12,7 @@ const extractError = (error: Response | any): string => {
   } else {
     errMsg = error.message ? error.message: error.toString();
   }
-  console.log(errMsg);
+  console.log(errMsg = "Seu e-mail ou senha estão incorretos, por favor verifique!!");
 
   return errMsg;
 }

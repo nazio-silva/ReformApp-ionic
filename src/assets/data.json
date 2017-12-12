@@ -1,0 +1,22 @@
+{
+    "servicos": [
+        {
+            "profissao": "Pedreiro",
+            "profissional": "Joao",
+            "telefone": "3333-4444",
+            "disponivel": false,
+            "empresas": [
+
+            ]
+        },
+        {
+            "profissao": "Eletricista",
+            "profissional": "Raimundo",
+            "telefone": "1111-2222",
+            "disponivel": false,
+            "empresas": [
+                
+            ]
+        }
+    ]
+}

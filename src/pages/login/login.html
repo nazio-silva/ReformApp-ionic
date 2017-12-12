@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content padding class="conteudo">
-  <div class="overlay"></div>
+  
   <form [formGroup]="singForm" (ngSubmit)="onSubmit(); $event.preventDefault()">
-   
+    <div class="overlay"></div> 
     <ion-item class="form-login">
       <ion-icon name="mail" item-left></ion-icon>
       <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
@@ -23,6 +23,8 @@
     <button ion-button class="btn-login" round type="submit"> Entrar </button>
     
     <p class="link" (click)="goToCadastro()"> Cadastrar Conta </p>
+
+    <p text-center class="startup"> TagWorking-Tecnologia </p>
 
   </form>
  

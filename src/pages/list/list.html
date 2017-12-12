@@ -8,9 +8,40 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <h2 text-center> Lista de Empresas </h2>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+
+  <h2 text-center> Lista de Empresas </h2>
+
+  <ion-row (click)="buscarEmpresa()">
+    <ion-col text-center>
+      Nome
+      <hr>
+      <ion-list>
+        <ion-item text-center> Normatel </ion-item>
+        <ion-item text-center> TendTudo </ion-item>
+        <ion-item text-center> Dep.Raimundao </ion-item>
+        <ion-item text-center> Dep.3 Irmaos </ion-item>
+      </ion-list>
+    </ion-col>
+    
+    <hr>
+    <hr>
+    
+    <ion-col text-center>
+      Endereço
+      <hr>
+      <ion-list> 
+          <ion-item text-center> W. Soares </ion-item>
+          <ion-item text-center> O.Paiva </ion-item>
+          <ion-item text-center> Cambeba </ion-item>
+          <ion-item text-center> Centro </ion-item>
+        </ion-list>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+<!--
+  <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-start></ion-icon>
       Nome: {{item.title}}
       <div class="item-note" item-end>
@@ -21,4 +52,4 @@
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
   </div>
-</ion-content>
+-->

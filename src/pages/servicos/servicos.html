@@ -9,23 +9,18 @@
 
 <ion-content padding>
 
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar (ionInput)="getServicos($event)"></ion-searchbar>
 
   <ion-card>
-
+    <ion-list>
     <ion-item>
       <ion-avatar item-start>
         <img src="assets/imgs/fundo-home.jpg">
       </ion-avatar>
       <h2>JOAO FERREIRA</h2>
-      <p> PROFISSAO: Eletricista </p>
+      <p *ngFor="let servico of servicos"> PROFISSAO: {{ servico }} </p>
     </ion-item>
-
-
-
-    <img src="assets/imgs/fundo-home.jpg">
-
-
+  </ion-list>
     <ion-card-content>
       <p text-center> TELEFONE: 85 99955-0044 </p>
     </ion-card-content>
@@ -53,10 +48,8 @@
         <img src="assets/imgs/fundo-login.jpg">
       </ion-avatar>
       <h2> RAIMUNDO SILVA </h2>
-      <p> PROFISSAO: Pedreiro </p>
+      <p *ngFor="let servico of servicos"> PROFISSAO: {{ servico }} </p>
     </ion-item>
-
-    <img src="assets/imgs/fundo-login.jpg">
 
     <ion-card-content>
       <p text-center> TELEFONE: 85 8888-3333 </p>

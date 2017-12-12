@@ -22,6 +22,6 @@ export class ProjetosPage {
     for( x = 0; x <= this.contador; x ++) {
       
     }
-    this.contador = x;
+      this.contador = x;
   }
 }

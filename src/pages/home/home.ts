@@ -54,42 +54,30 @@ export class HomePage {
   public gasto_telha: string = '0';
 
   calcular_telha() {
-    /* 
-    if( this.inclinacao >= 30 && this.inclinacao <= 35) {
-       let quantidade_telha = this.area_telha * 1.051;
-       this.qtd_telha = Math.round(quantidade_telha * 17);
-    } else if ( this.inclinacao > 35 && this.inclinacao <= 40 ) {
-       let quantidade_telha = this.area_telha * 1.070;
-       this.qtd_telha = Math.round(quantidade_telha * 25.92);  
-    } else {
-      this.qtd_telha = 0;
-      this.presentAlert();
-      console.log("Inclinação fora de norma!", this.inclinacao, "%");
-    }*/
 
     switch (this.inclinacao) {
       case '30':
-        let quantidade_telha = this.area_telha * 1.044;
+        let quantidade_telha: string = this.area_telha * 1.044;
         this.qtd_telha = Math.round(quantidade_telha * 17);
         break;
       case '31':
-        let quantidade_telha = this.area_telha * 1.047;
+        let quantidade_telha: string = this.area_telha * 1.047;
         this.qtd_telha = Math.round(quantidade_telha * 17);
         break;
       case '32':
-        let quantidade_telha = this.area_telha * 1.050;
+        let quantidade_telha: string = this.area_telha * 1.050;
         this.qtd_telha = Math.round(quantidade_telha * 17);
         break;
       case '33':
-        let quantidade_telha = this.area_telha * 1.053;
+        let quantidade_telha: string = this.area_telha * 1.053;
         this.qtd_telha = Math.round(quantidade_telha * 17);
         break;
       case '34':
-        let quantidade_telha = this.area_telha * 1.056;
+        let quantidade_telha: string = this.area_telha * 1.056;
         this.qtd_telha = Math.round(quantidade_telha * 17);
         break;
       case '35':
-        let quantidade_telha = this.area_telha * 1.059;
+        let quantidade_telha: string = this.area_telha * 1.059;
         this.qtd_telha = Math.round(quantidade_telha * 17);
         break;
       default:

@@ -3,7 +3,7 @@ export class Material {
         public area: string,
         public preco: number,
         public inclinacao: number,
-        private qtd: number,
-        private valor_gasto: number) {
+        private qtd: number
+        ) {
     }
 }

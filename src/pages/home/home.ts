@@ -49,36 +49,35 @@ export class HomePage {
   //Telha ceramica
   public area_telha: number;
   public preco_telha: number;
-  public inclinacao: number;
+  public inclinacao: string;
   public qtd_telha: number = 0;
   public gasto_telha: string = '0';
 
   calcular_telha() {
-
     switch (this.inclinacao) {
       case '30':
-        let quantidade_telha: string = this.area_telha * 1.044;
-        this.qtd_telha = Math.round(quantidade_telha * 17);
+        let quantidade_telha1: number = this.area_telha * 1.044;
+        this.qtd_telha = Math.round(quantidade_telha1 * 17);
         break;
       case '31':
-        let quantidade_telha: string = this.area_telha * 1.047;
-        this.qtd_telha = Math.round(quantidade_telha * 17);
+        let quantidade_telha2: number = this.area_telha * 1.047;
+        this.qtd_telha = Math.round(quantidade_telha2 * 17);
         break;
       case '32':
-        let quantidade_telha: string = this.area_telha * 1.050;
-        this.qtd_telha = Math.round(quantidade_telha * 17);
+        let quantidade_telha3: number = this.area_telha * 1.050;
+        this.qtd_telha = Math.round(quantidade_telha3 * 17);
         break;
       case '33':
-        let quantidade_telha: string = this.area_telha * 1.053;
-        this.qtd_telha = Math.round(quantidade_telha * 17);
+        let quantidade_telha4: number = this.area_telha * 1.053;
+        this.qtd_telha = Math.round(quantidade_telha4 * 17);
         break;
       case '34':
-        let quantidade_telha: string = this.area_telha * 1.056;
-        this.qtd_telha = Math.round(quantidade_telha * 17);
+        let quantidade_telha5: number = this.area_telha * 1.056;
+        this.qtd_telha = Math.round(quantidade_telha5 * 17);
         break;
       case '35':
-        let quantidade_telha: string = this.area_telha * 1.059;
-        this.qtd_telha = Math.round(quantidade_telha * 17);
+        let quantidade_telha6: number = this.area_telha * 1.059;
+        this.qtd_telha = Math.round(quantidade_telha6 * 17);
         break;
       default:
         this.qtd_telha = 0;

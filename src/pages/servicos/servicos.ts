@@ -22,6 +22,9 @@ export class ServicosPage {
       'Pedreiro',
       'Eletricista',
       'Bombeiro',
+      'Auxiliar',
+      'Pintor',
+      'Jardineiro',
     ];
   }
 

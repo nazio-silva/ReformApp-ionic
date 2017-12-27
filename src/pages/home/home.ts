@@ -5,8 +5,6 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { AlertController } from 'ionic-angular';
 
-//import { NgForm } from '@angular/forms';
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

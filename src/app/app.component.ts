@@ -16,7 +16,7 @@ import { LoginPage } from './../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage
+  rootPage: any = ServicosPage//LoginPage
 
   pages: Array<{title: string, component: any}>;
  
@@ -30,7 +30,6 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Empresas', component: ListPage },     
       { title: 'Projetos', component: ProjetosPage },
-      //{ title: 'Simulador', component: LoginPage },
       { title: 'Serviços', component: ServicosPage },      
       { title: 'Sair', component: LoginPage },
     ];

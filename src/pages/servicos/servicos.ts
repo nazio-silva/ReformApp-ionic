@@ -10,11 +10,14 @@ import { Http } from '@angular/http';
 export class ServicosPage {
 
   searchQuery: string = '';
+  
   servicos: string[];
-
+  profissionais: string[];
+  
   constructor(
     public navCtrl: NavController) {
     this.initializeServicos();
+    this.initializeProfissionais();
   }
 
   initializeServicos() {
@@ -25,7 +28,18 @@ export class ServicosPage {
       'Auxiliar',
       'Pintor',
       'Jardineiro',
-    ];
+    ]
+  }
+
+  initializeProfissionais() {
+    this.profissionais = [ 
+      'Joao',
+      'Antonio',
+      'Francisco',
+      'Raimundo',
+      'Jose',
+      'Pedro',
+    ]
   }
 
   getServicos(ev: any) {

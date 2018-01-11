@@ -12,39 +12,112 @@
   <h1 text-center> Simulador </h1>
 
   <ion-card>
-
     <ion-list>
       <ion-item>
-        <ion-label> TIJOLOS </ion-label> 
+        <ion-label> TIJOLOS </ion-label>
         <ion-select [(ngModel)]="tijolos">
-          <ion-option value="conv"> CERAMICO 8-F </ion-option>
-          <ion-option value="ref"> REFRATARIO </ion-option>
-          <ion-option value="bra"> MACIÇO </ion-option>
+          <ion-option value="ceramico 8F"> CERAMICO 8-F </ion-option>
+          <ion-option value="ceramico 6F"> CERAMICO 6-F </ion-option>
+          <ion-option value="macico branco"> MACIÇO </ion-option>
+          <ion-option value="refratario"> REFRATARIO </ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
 
     <ion-list>
-      <ion-item>
-        <ion-label> Área: </ion-label>
-        <ion-input name="area" type="number" [(ngModel)]="area" placeholder=" Digite o valor da área "></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Preço R$: </ion-label>
-        <ion-input name="preco" type="number" [(ngModel)]="preco" placeholder=" Preço do Tijolo"></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Quantidade: {{qtd}} </ion-label>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Total R$: {{gasto}} </ion-label>
-      </ion-item>
+      <div [ngSwitch]="tijolos">
+        <ion-list *ngSwitchCase="'ceramico 8F'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area" placeholder=" Digite o valor da área "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco" placeholder=" Preço do Tijolo"></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'ceramico 6F'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area" placeholder=" Digite o valor da área "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco" placeholder=" Preço do Tijolo"></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'macico branco'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area" placeholder=" Digite o valor da área "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco" placeholder=" Preço do Tijolo"></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'refratario'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area" placeholder=" Digite o valor da área "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco" placeholder=" Preço do Tijolo"></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto }} </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
     </ion-list>
   </ion-card>
 
@@ -53,46 +126,169 @@
   </div>
 
   <hr>
-
+  
+<!-- Telhas -->
   <ion-card>
-
     <ion-list>
       <ion-item>
         <ion-label> TELHAS </ion-label>
         <ion-select [(ngModel)]="telhas">
-          <ion-option value="cer"> CERAMICA </ion-option>
-          <ion-option value="conc"> CONCRETO </ion-option>
+          <ion-option value="americana"> AMERICANA </ion-option>
+          <ion-option value="colonial"> COLONIAL </ion-option>
+          <ion-option value="italiana"> ITALIANA </ion-option>
+          <ion-option value="romana"> ROMANA </ion-option>
+          <ion-option value="portuguesa"> PORTUGUESA </ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
 
     <ion-list>
-      <ion-item>
-        <ion-label> Área: </ion-label>
-        <ion-input name="area" type="number" [(ngModel)]="area_telha" placeholder=" Área Coberta "></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Inclinação: </ion-label>
-        <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao" placeholder=" Inclinação % "></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Preço R$: </ion-label>
-        <ion-input name="preco" type="number" [(ngModel)]="preco_telha" placeholder=" Preço da Telha "></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Quantidade: {{qtd_telha}} </ion-label>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Total R$: {{gasto_telha}} </ion-label>
-      </ion-item>
+      <div [ngSwitch]="telhas">
+        <ion-list *ngSwitchCase="'americana'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area_telha" placeholder=" Área Coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Inclinação: </ion-label>
+            <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao" placeholder=" Inclinação % "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_telha" placeholder=" Preço da Telha "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_telha }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_telha }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'colonial'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area_telha" placeholder=" Área Coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Inclinação: </ion-label>
+            <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao" placeholder=" Inclinação % "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_telha" placeholder=" Preço da Telha "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_telha }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_telha }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'italiana'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area_telha" placeholder=" Área Coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Inclinação: </ion-label>
+            <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao" placeholder=" Inclinação % "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_telha" placeholder=" Preço da Telha "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_telha }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_telha }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'romana'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area_telha" placeholder=" Área Coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Inclinação: </ion-label>
+            <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao" placeholder=" Inclinação % "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_telha" placeholder=" Preço da Telha "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_telha }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_telha }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'portuguesa'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area_telha" placeholder=" Área Coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Inclinação: </ion-label>
+            <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao" placeholder=" Inclinação % "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_telha" placeholder=" Preço da Telha "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_telha }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_telha }} </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
     </ion-list>
   </ion-card>
 
@@ -116,32 +312,112 @@
     </ion-list>
 
     <ion-list>
-      <ion-item>
-        <ion-label> Área: </ion-label>
-        <ion-input name="area" type="number" [(ngModel)]="area_madeira" placeholder=" Área Coberta "></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Inclinação: </ion-label>
-        <ion-input name="inclinacao" type="number" [(ngModel)]="inclinacao_madeira" placeholder=" Inclinação % "></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Preço R$: </ion-label>
-        <ion-input name="preco" type="number" [(ngModel)]="preco_madeira" placeholder=" Preço da Madeira "></ion-input>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> Quantidade: {{qtd_madeira}} </ion-label>
-      </ion-item>
-      <hr>
-      <hr>
-      <ion-item>
-        <ion-label> TotalR$: {{gasto_madeira}} </ion-label>
-      </ion-item>
+      <div [ngSwitch]="madeira">
+        <ion-list *ngSwitchCase="'linha'">
+          <ion-item>
+            <ion-label> Largura: </ion-label>
+            <ion-input name="largura" type="number" [(ngModel)]="largura" placeholder=" Largura da coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Comprimento: </ion-label>
+            <ion-input name="comprimento" type="number" [(ngModel)]="comprimento" placeholder=" Comprimento da coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Espacamento: </ion-label>
+            <ion-input name="espacamento" type="number" [(ngModel)]="espacamento" placeholder=" Espaçamento da madeira "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_madeira" placeholder=" Preço da Madeira "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_madeira }}</ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_madeira }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'caibro'">
+          <ion-item>
+            <ion-label> Largura: </ion-label>
+            <ion-input name="largura" type="number" [(ngModel)]="largura" placeholder=" Largura da coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Comprimento: </ion-label>
+            <ion-input name="comprimento" type="number" [(ngModel)]="comprimento" placeholder=" Comprimento da coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Espacamento: </ion-label>
+            <ion-input name="espacamento" type="number" [(ngModel)]="espacamento" placeholder=" Espaçamento da madeira "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_madeira" placeholder=" Preço da Madeira "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_madeira }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_madeira }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'ripa'">
+          <ion-item>
+            <ion-label> Largura: </ion-label>
+            <ion-input name="largura" type="number" [(ngModel)]="largura" placeholder=" Comprimento da coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Comprimento: </ion-label>
+            <ion-input name="comprimento" type="number" [(ngModel)]="comprimento" placeholder=" Comprimento da coberta "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Espacamento: </ion-label>
+            <ion-input name="espacamento" type="number" [(ngModel)]="espacamento" placeholder=" Espaçamento da madeira "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_madeira" placeholder=" Preço da Madeira "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_madeira }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Total R$: {{ gasto_madeira }} </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
     </ion-list>
   </ion-card>
 
@@ -150,45 +426,72 @@
   </div>
 
   <hr>
-  
-    <ion-card>
-  
-      <ion-list>
-        <ion-item>
-          <ion-label> CIMENTO </ion-label>
-          <ion-select [(ngModel)]="cimento">
-            <ion-option value="alvenaria"> Alvenaria 4/1 </ion-option>
-            <ion-option value="reboco"> Reboco 5/1 </ion-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-  
-      <ion-list>
-        <ion-item>
-          <ion-label> Área: </ion-label>
-          <ion-input name="area" type="number" [(ngModel)]="area_cimento" placeholder=" Digite a área "></ion-input>
-        </ion-item>
-        <hr>
-        <hr>
-        <ion-item>
-          <ion-label> Preço R$: </ion-label>
-          <ion-input name="preco" type="number" [(ngModel)]="preco_cimento" placeholder=" Preço do Cimento "></ion-input>
-        </ion-item>
-        <hr>
-        <hr>
-        <ion-item>
-          <ion-label> Quantidade: {{qtd_cimento}} </ion-label>
-        </ion-item>
-        <hr>
-        <hr>
-        <ion-item>
-          <ion-label> TotalR$: {{gasto_cimento}} </ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-card>
-  
-    <div class="btn-calc">
-      <button ion-button round (click)="calcular_cimento()"> Calcular </button>
-    </div>
+
+  <ion-card>
+
+    <ion-list>
+      <ion-item>
+        <ion-label> CIMENTO </ion-label>
+        <ion-select [(ngModel)]="cimento">
+          <ion-option value="alvenaria"> Alvenaria 4/1 </ion-option>
+          <ion-option value="reboco"> Reboco 5/1 </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <div [ngSwitch]="cimento">
+        <ion-list *ngSwitchCase="'alvenaria'">
+          <ion-item>
+            <ion-label> Área: </ion-label>
+            <ion-input name="area" type="number" [(ngModel)]="area_cimento" placeholder=" Digite a área "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Preço R$: </ion-label>
+            <ion-input name="preco" type="number" [(ngModel)]="preco_cimento" placeholder=" Preço do Cimento "></ion-input>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> Quantidade: {{ qtd_cimento }} </ion-label>
+          </ion-item>
+          <hr>
+          <hr>
+          <ion-item>
+            <ion-label> TotalR$: {{ gasto_cimento }} </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'reboco'">
+            <ion-item>
+              <ion-label> Área: </ion-label>
+              <ion-input name="area" type="number" [(ngModel)]="area_cimento" placeholder=" Digite a área "></ion-input>
+            </ion-item>
+            <hr>
+            <hr>
+            <ion-item>
+              <ion-label> Preço R$: </ion-label>
+              <ion-input name="preco" type="number" [(ngModel)]="preco_cimento" placeholder=" Preço do Cimento "></ion-input>
+            </ion-item>
+            <hr>
+            <hr>
+            <ion-item>
+              <ion-label> Quantidade: {{ qtd_cimento }} </ion-label>
+            </ion-item>
+            <hr>
+            <hr>
+            <ion-item>
+              <ion-label> Total R$: {{ gasto_cimento }} </ion-label>
+            </ion-item>
+          </ion-list>
+      </div>
+    </ion-list>
+  </ion-card>
+
+  <div class="btn-calc">
+    <button ion-button round (click)="calcular_cimento()"> Calcular </button>
+  </div>
 
 </ion-content>

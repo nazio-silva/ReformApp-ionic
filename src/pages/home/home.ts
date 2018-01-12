@@ -285,13 +285,13 @@ export class HomePage {
         console.log('linha');
         let larg = this.largura;
         console.log(larg);
-        this.qtd_madeira = this.largura / this.espacamento ;
+        this.qtd_madeira = this.largura / this.espacamento;
         this.qtd_madeira = Math.round(this.qtd_madeira - 1);
         break;
       case 'caibro':
         console.log('caibro');
         let larg1 = this.largura;
-        console.log(larg);
+        console.log(larg1);
         this.qtd_madeira = this.largura / (this.espacamento / 100);
         this.qtd_madeira = Math.round(this.qtd_madeira + 2);
         break;
@@ -303,19 +303,39 @@ export class HomePage {
         this.qtd_madeira = Math.round(this.qtd_madeira + 2);
         break;
     };
+    var gasto_madeira: number = this.preco_madeira * (this.qtd_madeira * this.comprimento);
+    this.gasto_madeira = gasto_madeira.toFixed(2);
+    console.log("Valor Gasto:", this.gasto_madeira);
+    //break;
   };
 
   //Cimento
   public area_cimento: number;
   public preco_cimento: number;
-  public qtd_cimento: number;
-  public gasto_cimento: number;
+  public qtd_cimento: number = 0;
+  public gasto_cimento: number = 0.00;
+
+  public cimento: string = 'alvenaria';
 
   calcular_cimento() {
-    this.qtd_cimento = Math.round(this.area_cimento / 12);
-    console.log("QTD: ", this.qtd_cimento);
+    switch (this.cimento) {
+      case 'alvenaria':
+        console.log('Alvenaria 4/1');
+        //Alvenaria
+        this.qtd_cimento = Math.round(this.area_cimento / 12);
+        console.log("QTD: ", this.qtd_cimento);
 
-    this.gasto_cimento = this.qtd_cimento * this.preco_cimento;
-    console.log("Gasto:", this.gasto_cimento);
-  }
-}
+        this.gasto_cimento = this.qtd_cimento * this.preco_cimento;
+        console.log("Gasto:", this.gasto_cimento);
+        break;
+      case 'reboco': 
+        console.log('reboco');
+        this.qtd_cimento = Math.round(this.area_cimento / 25);
+        console.log(this.qtd_cimento);
+
+        this.gasto_cimento = this.qtd_cimento * this.preco_cimento;
+        console.log("Gasto:", this.gasto_cimento);
+        break;
+    };
+  ;}
+};
